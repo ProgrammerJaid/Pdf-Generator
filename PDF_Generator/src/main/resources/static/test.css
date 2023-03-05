@@ -1,0 +1,20 @@
+/* {
+  box-sizing: border-box;
+} */
+/* Set additional styling options for the columns*/
+
+
+.container {
+    padding: 3em 0em 0em 3em;
+    border: 1px solid black;
+  }
+  .col-md-5{
+    border: 1px solid black;
+    border-style: solid;
+    padding: 6rem;
+    font-size: larger;
+    text-align: left;
+    font-weight: 500;
+    font-style: unset;
+    font-family: cursive;
+  }

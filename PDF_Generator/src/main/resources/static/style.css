@@ -1,0 +1,22 @@
+.container {
+  padding: 3em 0em 0em 3em;
+  /* border: 2px solid black; */
+  border: 1px solid black;
+}
+
+/* .col-md-6{
+  /* border: 2px dashed red;
+  border-top: 5px solid green;
+  border-right: 10px dotted cadetblue;
+} */
+
+.col-md-5{
+  border: 1px solid black;
+  border-style: solid;
+  padding: 6rem;
+  font-size: larger;
+  text-align: left;
+  font-weight: 500;
+  font-style: unset;
+  font-family: cursive;
+}

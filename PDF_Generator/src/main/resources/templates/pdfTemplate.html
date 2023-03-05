@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <!-- Latest compiled and minified CSS -->
+    <style>
+        .container {
+            padding: 3em 0em 0em 3em;
+            border: 1px solid black;
+        }
+        .col-md-5{
+            border: 1px solid black;
+            border-style: solid;
+            padding: 6rem;
+            font-size: larger;
+            text-align: left;
+            font-weight: 500;
+            font-style: unset;
+            font-family: cursive;
+        }
+    </style>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@3.3.7/dist/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous"></link>
+    <title>Document</title>
+</head>
+<body>
+    <div class="container" border="1 px solid black">
+        <div class="row">
+            <div class="col-md-4" border="1 px solid black">
+                <h3>Seller:</h3>
+                <h4 th:text="${seller.sellerName}"></h4>
+                <h4 th:text="${seller.sellerAddress}"></h4>
+                <h4>GSTIN: <span th:text="${seller.sellerGstin}"></span></h4>
+            </div>
+            <div class="col-md-4" border="1 px solid black">
+                <h3>Buyer:</h3>
+                <h4 th:text="${buyer.buyerName}"></h4>
+                <h4 th:text="${buyer.buyerAddress}"></h4>
+                <h4>GSTIN: <span th:text="${buyer.buyerGstin}"></span></h4>
+            </div>
+            <div class="col-md-8">
+                <table class="table" border="1 px solid black">
+                    <thead>
+                        <tr>
+                          <th scope="col">Item</th>
+                          <th scope="col">Quantity</th>
+                          <th scope="col">Rate</th>
+                          <th scope="col">Amount</th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        <tr th:each = "item: ${items}">
+                          <td th:text = "${item.name}"></td>
+                          <td th:text = "${item.quantity}"></td>
+                          <td th:text = "${item.rate}"></td>
+                          <td th:text = "${item.amount}"></td>
+                        </tr>
+                      </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
